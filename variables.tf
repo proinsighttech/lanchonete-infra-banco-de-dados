@@ -39,11 +39,6 @@ variable "DB_NAME" {
   default     = "proinsight"
 }
 
-variable "DB_HOST" {
-  description = "The host of the database"
-  default     = "localhost"
-}
-
 variable "DB_USERNAME" {
   description = "The username for the database"
   default     = "root"
