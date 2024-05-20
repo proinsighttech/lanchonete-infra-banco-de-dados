@@ -1,3 +1,16 @@
+terraform {
+    required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+  backend "s3" {
+    bucket = "snackshop-terraform-state-bucket"
+    key    = "rds-terraform-state"
+    region = "us-west-2"
+  }
+}
 provider "aws" {
  region = var.region
 }

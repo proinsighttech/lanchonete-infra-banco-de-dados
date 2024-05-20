@@ -1,7 +1,17 @@
 name: CI/CD Pipeline
+
 on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
   push:
-    branches:
+    branches: 
+      - main
+  pull_request:
+    branches: 
       - main
 
 jobs:
